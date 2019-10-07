@@ -17,7 +17,9 @@ public class Usuario {
     public Boolean visteCompletoEsto(Contenido unContenido) {
         return unContenido.vistoCompleto(this);
     }
-
+    public List <Contenido> contenidosRecomendados(){
+        return contenidosVistosPorUsuario.stream().filter(c -> !c.vistoCompleto(this)).collect(Collectors.toList());
+    }
 
     public Integer cuantasUnidadesDeContenidoViste() {
         return this.contenidosVistosPorUsuario.size();
