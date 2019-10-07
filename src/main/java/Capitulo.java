@@ -3,39 +3,43 @@ import java.util.List;
 
 public class Capitulo extends UnidadDeContenido {
     private Integer numeroDeCapitulo;
-    private List <String> actoresInvitados= new ArrayList<>();
+    private List <Actor> actoresInvitados= new ArrayList<>();
     private Integer duracionDeCapitulo;
+    private Temporada temporada;
+    private Serie serie;
 
-   public Capitulo(Integer numeroDeCapitulo, Integer duracionDeCapitulo, String genero){
+   public Capitulo(Integer numeroDeCapitulo, Integer duracionDeCapitulo, Temporada temporada){
        super();
-        this.setGenero(genero);
         this.numeroDeCapitulo=numeroDeCapitulo;
-        this.setDuracionDeCapitulo(duracionDeCapitulo);
+        this.duracionDeCapitulo=duracionDeCapitulo;
+        this.temporada=temporada;
 
     }
 
-   public void setActoresInvitados ( String unActorInvitado){
+   public void setActoresInvitados (Actor unActorInvitado){
+
        this.actoresInvitados.add(unActorInvitado);
    }
 
+    public Boolean actuo(Actor actor){
+
+        return actoresInvitados.contains(actor);
+    }
 
 
     public Integer cuantoDura() {
-        return duracionDeCapitulo;
+
+       return duracionDeCapitulo;
     }
 
-    public void setDuracionDeCapitulo(Integer duracionDeCapitulo) {
-        this.duracionDeCapitulo = duracionDeCapitulo;
-    }
-    public boolean vistoCompleto(Usuario unUsuario) {
-        return unUsuario.estoEstaEnTuBolsa(this);
-    }
 
     public Integer getNumeroDeCapitulo() {
-        return numeroDeCapitulo;
+
+       return numeroDeCapitulo;
     }
 
     public void setNumeroDeCapitulo(Integer numeroDeCapitulo) {
-        this.numeroDeCapitulo = numeroDeCapitulo;
+
+       this.numeroDeCapitulo = numeroDeCapitulo;
     }
 }

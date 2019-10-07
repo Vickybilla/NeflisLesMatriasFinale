@@ -6,6 +6,7 @@ public interface Contenido {
 
  Integer cuantoDura();
 
+ Boolean actuo(Actor actor);
 
 
 

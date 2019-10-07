@@ -4,12 +4,15 @@ import java.util.List;
 public class Pelicula extends UnidadDeContenido {
 
     private String nombreDePelicula;
-
     private Integer duracionDePelicula;
+    private List<Actor> actoresDePeliculas = new ArrayList<>();
 
-    private List<String> actoresDePeliculas = new ArrayList<>();
-
-    public void setActoresDePeliculas(String unActortrizDePelicula) {
+    public Pelicula(String genero,String nombreDePelicula,Integer duracionDePelicula){
+    super.setGenero(genero);
+        this.nombreDePelicula=nombreDePelicula;
+        this.duracionDePelicula=duracionDePelicula;
+    }
+    public void setActoresDePeliculas(Actor unActortrizDePelicula) {
         this.actoresDePeliculas.add(unActortrizDePelicula);
 
     }
@@ -29,9 +32,13 @@ public class Pelicula extends UnidadDeContenido {
 
 
     public boolean vistoCompleto(Usuario unUsuario) {
-        return unUsuario.estoEstaEnTuBolsa(this);
+        return unUsuario.contenidoFueVisto(this);
 }
 
+    public Boolean actuo(Actor actor){
+
+        return actoresDePeliculas.contains(actor);
+    }
 
     public String getNombreDePelicula() {
         return nombreDePelicula;

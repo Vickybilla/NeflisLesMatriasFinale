@@ -2,8 +2,14 @@ public class UnidadDeContenido implements Contenido {
 
     public String genero;
 
+
+    public UnidadDeContenido(){
+
+    }
+
+
     public boolean vistoCompleto(Usuario unUsuario) {
-        return unUsuario.estoEstaEnTuBolsa(this);
+        return unUsuario.contenidoFueVisto(this);
 
     }
     private Integer duracion;
@@ -20,7 +26,12 @@ public class UnidadDeContenido implements Contenido {
         return duracion;
     }
 
-    public void setDuracion(Integer duracion) {
+    public Boolean actuo(Actor actor) {
+        return actor.actuoEn(this);
+    }
+
+    public void setDuracion(Integer duracion)
+    {
         this.duracion = duracion;
     }
 }

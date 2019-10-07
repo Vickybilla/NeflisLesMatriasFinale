@@ -2,11 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Temporada {
-
-
-    private Capitulo capitulo;
+    private Serie serie;
     private Integer numeroDeTemporada;
-    private List<Capitulo> capitulos2 = new ArrayList<>();
+    public List<Capitulo> capitulos2 = new ArrayList<>();
 
 
     public Integer cantidadDeCapitulosEnTemporada() {

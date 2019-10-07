@@ -7,16 +7,16 @@ public class NeflisMain {
 
         Serie serieSense8 = new Serie("Sense8", "Ciencia Ficcion");
         Temporada sense1 = new Temporada();
-        Capitulo sensecap1 = new Capitulo(1, 40, "Ciencia Ficcion");
-        Capitulo sensecap2 = new Capitulo(2, 46, "Ciencia Ficcion");
+        Capitulo sensecap1 = new Capitulo(1, 40, sense1);
+        Capitulo sensecap2 = new Capitulo(2, 46, sense1);
         serieSense8.agregarTemporada(sense1);
         sense1.setNumeroDeTemporada(1);
         sense1.agregarCapitulo(sensecap1);
         sense1.agregarCapitulo(sensecap2);
         Temporada sense2 = new Temporada();
-        Capitulo sensecap3 = new Capitulo(3, 52, "Ciencia Ficcion");
-        Capitulo sensecap4 = new Capitulo(4, 92, "Ciencia Ficcion");
-        Capitulo sensecap5 = new Capitulo(5, 48, "Ciencia Ficcion");
+        Capitulo sensecap3 = new Capitulo(3, 52, sense2);
+        Capitulo sensecap4 = new Capitulo(4, 92, sense2);
+        Capitulo sensecap5 = new Capitulo(5, 48, sense2);
         serieSense8.agregarTemporada(sense2);
         sense2.agregarCapitulo(sensecap3);
         sense2.agregarCapitulo(sensecap4);
@@ -27,9 +27,10 @@ public class NeflisMain {
         Temporada sherlockTemp1 = new Temporada();
         Temporada sherlockTemp2 = new Temporada();
         Temporada sherlockTemp3 = new Temporada();
-
-        serieSherlock.setActoresFijosDeLaSerie("Benedict Cumberbatch");
-        serieSherlock.setActoresFijosDeLaSerie("Martin Freeman");
+        Actor benedictCumberbatch= new Actor("Benedict Cumberbatch");
+        Actor martinFreeman=new Actor ("Martin Freeman");
+        serieSherlock.setActoresFijosDeLaSerie(benedictCumberbatch);
+        serieSherlock.setActoresFijosDeLaSerie(martinFreeman);
 
         serieSherlock.agregarTemporada(sherlockTemp1);
         sherlockTemp1.setNumeroDeTemporada(1);
@@ -38,19 +39,19 @@ public class NeflisMain {
         serieSherlock.agregarTemporada(sherlockTemp3);
         sherlockTemp3.setNumeroDeTemporada(3);
 
-        Capitulo sherlockcap1 = new Capitulo(1, 56, "Policial");
-        Capitulo sherlockcap2 = new Capitulo(2, 67, "Policial");
-        Capitulo sherlockcap3 = new Capitulo(3, 78, "Policial");
-        Capitulo sherlockcap4 = new Capitulo(4, 60, "Policial");
-        Capitulo sherlockcap5 = new Capitulo(5, 50, "Policial");
-        Capitulo sherlockcap6 = new Capitulo(6, 48, "Policial");
-        Capitulo sherlockcap7 = new Capitulo(7, 68, "Policial");
-        Capitulo sherlockcap8 = new Capitulo(8, 58, "Policial");
-        Capitulo sherlockcap9 = new Capitulo(9, 70, "Policial");
-        Capitulo sherlockcap10 = new Capitulo(10, 98, "Policial");
-
-        sherlockcap1.setActoresInvitados("Mark Gatiss");
-        sherlockcap2.setActoresInvitados("Rupert Graves");
+        Capitulo sherlockcap1 = new Capitulo(1, 56,sherlockTemp1);
+        Capitulo sherlockcap2 = new Capitulo(2, 67, sherlockTemp1);
+        Capitulo sherlockcap3 = new Capitulo(3, 78,sherlockTemp1);
+        Capitulo sherlockcap4 = new Capitulo(4, 60,sherlockTemp2);
+        Capitulo sherlockcap5 = new Capitulo(5, 50, sherlockTemp2);
+        Capitulo sherlockcap6 = new Capitulo(6, 48, sherlockTemp2);
+        Capitulo sherlockcap7 = new Capitulo(7, 68, sherlockTemp3);
+        Capitulo sherlockcap8 = new Capitulo(8, 58,sherlockTemp3);
+        Capitulo sherlockcap9 = new Capitulo(9, 70, sherlockTemp3);
+        Capitulo sherlockcap10 = new Capitulo(10, 98, sherlockTemp3);
+        Actor markGatiss = new Actor("Mark Gatiss");
+        sherlockcap1.setActoresInvitados(markGatiss);
+      /*  sherlockcap2.setActoresInvitados("Rupert Graves");
         sherlockcap3.setActoresInvitados("Louise Brealey");
         sherlockcap4.setActoresInvitados("Andrew Scott");
         sherlockcap5.setActoresInvitados("Amanda Abbington");
@@ -58,7 +59,7 @@ public class NeflisMain {
         sherlockcap7.setActoresInvitados("Keanu Reeves");
         sherlockcap8.setActoresInvitados("Tilda Swinton");
         sherlockcap9.setActoresInvitados("Rachel Weisz");
-        sherlockcap10.setActoresInvitados("Charlize Theron");
+        sherlockcap10.setActoresInvitados("Charlize Theron");*/
 
 
         sherlockTemp1.agregarCapitulo(sherlockcap1);
@@ -73,7 +74,7 @@ public class NeflisMain {
         sherlockTemp3.agregarCapitulo(sherlockcap10);
 
 
-        serieSense8.setActoresFijosDeLaSerie("Jamie Clayton");
+     /**   serieSense8.setActoresFijosDeLaSerie("Jamie Clayton");
         serieSense8.setActoresFijosDeLaSerie("Miguel Angel Silvestre");
         serieSense8.setActoresFijosDeLaSerie("Max Riemelt");
 
@@ -82,29 +83,29 @@ public class NeflisMain {
         sensecap3.setActoresInvitados("Eréndira Ibarra");
         sensecap3.setActoresInvitados("Freema Agyeman");
         sensecap4.setActoresInvitados("Sukku Son");
-        sensecap5.setActoresInvitados("Terrence Mann");
+        sensecap5.setActoresInvitados("Terrence Mann"); **/
 
-        Pelicula constantine = new Pelicula();
-        constantine.setNombreDePelicula("Constantine");
-        constantine.setDuracionDePelicula(120);
-        constantine.setGenero("Fantasia");
-        constantine.setActoresDePeliculas("Keanu Reeves");
-        constantine.setActoresDePeliculas("Rachel Weisz");
-        constantine.setActoresDePeliculas("Tilda Swinton");
+        Pelicula constantine = new Pelicula("Fantasia","Constantine",122);
 
-        Pelicula elAbogadoDelDiablo = new Pelicula();
-        elAbogadoDelDiablo.setNombreDePelicula("El Abogado Del Diablo");
-        elAbogadoDelDiablo.setDuracionDePelicula(121);
-        elAbogadoDelDiablo.setActoresDePeliculas("Al Pacino");
-        elAbogadoDelDiablo.setActoresDePeliculas("Keanu Reeves");
-        elAbogadoDelDiablo.setGenero("Terror");
+        Actor keanuReeves= new Actor("Keanu Reeves");
+        constantine.setActoresDePeliculas(keanuReeves);
+        Actor rachelWeisz= new Actor("Rachel Weisz");
+        constantine.setActoresDePeliculas(rachelWeisz);
+        Actor tildaSwinton= new Actor ( "Tilda Swinton");
+        constantine.setActoresDePeliculas(tildaSwinton);
 
-        Pelicula drStrage = new Pelicula();
-        drStrage.setNombreDePelicula("Dr. Strange Hechicero Supremo");
-        drStrage.setGenero("Fantasia");
-        drStrage.setDuracionDePelicula(149);
-        drStrage.setActoresDePeliculas("Benedict Cumberbatch");
-        drStrage.setActoresDePeliculas("Tilda Swinton");
+        Pelicula elAbogadoDelDiablo = new Pelicula("Terror","El Abogado Del Diablo",121);
+
+        Actor alPacino= new Actor("Al Pacino");
+        elAbogadoDelDiablo.setActoresDePeliculas(alPacino);
+
+        elAbogadoDelDiablo.setActoresDePeliculas(keanuReeves);
+
+
+        Pelicula drStrage = new Pelicula("Fantasia","Dr. Strange Hechicero Supremo",149);
+
+        drStrage.setActoresDePeliculas(benedictCumberbatch);
+        drStrage.setActoresDePeliculas(tildaSwinton);
 
 
         vicky.yaLoViste(drStrage);
@@ -138,19 +139,19 @@ public class NeflisMain {
         Serie seriestrangerthings = new Serie("Stranger Things", "Ciencia Ficcion");
         Temporada stranger1 = new Temporada();
         stranger1.setNumeroDeTemporada(1);
-        Capitulo strangercapitulo1 = new Capitulo(1, 58, "Ciencia Ficcion");
-        Capitulo strangercapitulo2 = new Capitulo(2, 46, "Ciencia Ficcion");
-        Capitulo strangercapitulo3 = new Capitulo(3, 52, "Ciencia Ficcion");
-        Capitulo strangercapitulo4 = new Capitulo(4, 50, "Ciencia Ficcion");
+        Capitulo strangercapitulo1 = new Capitulo(1, 58, stranger1);
+        Capitulo strangercapitulo2 = new Capitulo(2, 46, stranger1);
+        Capitulo strangercapitulo3 = new Capitulo(3, 52,stranger1);
+        Capitulo strangercapitulo4 = new Capitulo(4, 50, stranger1);
         Temporada stranger2 = new Temporada();
         stranger2.setNumeroDeTemporada(2);
-        Capitulo stranger2capitulo5 = new Capitulo(5, 42, "Ciencia Ficcion");
-        Capitulo stranger2capitulo6 = new Capitulo(6, 44, "Ciencia Ficcion");
-        Capitulo stranger2capitulo7 = new Capitulo(7, 48, "Ciencia Ficcion");
+        Capitulo stranger2capitulo5 = new Capitulo(5, 42, stranger2);
+        Capitulo stranger2capitulo6 = new Capitulo(6, 44, stranger2);
+        Capitulo stranger2capitulo7 = new Capitulo(7, 48, stranger2);
         Temporada stranger3 = new Temporada();
         stranger3.setNumeroDeTemporada(3);
-        Capitulo strangercapitulo8 = new Capitulo(8, 40, "Ciencia Ficcion");
-        Capitulo strangercapitulo9 = new Capitulo(9, 54, "Ciencia Ficcion");
+        Capitulo strangercapitulo8 = new Capitulo(8, 40, stranger3);
+        Capitulo strangercapitulo9 = new Capitulo(9, 54, stranger3);
 
         seriestrangerthings.agregarTemporada(stranger1);
         stranger1.agregarCapitulo(strangercapitulo1);
@@ -167,7 +168,7 @@ public class NeflisMain {
         stranger3.agregarCapitulo(strangercapitulo9);
 
 
-        seriestrangerthings.setActoresFijosDeLaSerie("Winona Ryder");
+      /**  seriestrangerthings.setActoresFijosDeLaSerie("Winona Ryder");
         seriestrangerthings.setActoresFijosDeLaSerie("David Harbour");
         seriestrangerthings.setActoresFijosDeLaSerie("Finn Wolfhard");
         seriestrangerthings.setActoresFijosDeLaSerie("Millie Bobby Brown");
@@ -210,18 +211,18 @@ public class NeflisMain {
         Serie seriebreakingbad = new Serie("Breaking Bad", "Drama");
         Temporada breakingbad1 = new Temporada();
         breakingbad1.setNumeroDeTemporada(1);
-        Capitulo bbcapitulo1 = new Capitulo(1, 50, "Drama");
-        Capitulo bbcapitulo2 = new Capitulo(2, 52, "Drama");
-        Capitulo bbcapitulo3 = new Capitulo(3, 54, "Drama");
+        Capitulo bbcapitulo1 = new Capitulo(1, 50, breakingbad1);
+        Capitulo bbcapitulo2 = new Capitulo(2, 52, breakingbad1);
+        Capitulo bbcapitulo3 = new Capitulo(3, 54, breakingbad1);
         Temporada breakingbad2 = new Temporada();
         breakingbad2.setNumeroDeTemporada(2);
-        Capitulo bbcapitulo4 = new Capitulo(4, 44, "Drama");
-        Capitulo bbcapitulo5 = new Capitulo(5, 60, "Drama");
-        Capitulo bbcapitulo6 = new Capitulo(6, 42, "Drama");
-        Capitulo bbcapitulo7 = new Capitulo(7, 48, "Drama");
+        Capitulo bbcapitulo4 = new Capitulo(4, 44, breakingbad2);
+        Capitulo bbcapitulo5 = new Capitulo(5, 60, breakingbad2);
+        Capitulo bbcapitulo6 = new Capitulo(6, 42, breakingbad2);
+        Capitulo bbcapitulo7 = new Capitulo(7, 48, breakingbad2);
         Temporada breakingbad3 = new Temporada();
         breakingbad3.setNumeroDeTemporada(3);
-        Capitulo bbcapitulo8 = new Capitulo(8, 50, "Drama");
+        Capitulo bbcapitulo8 = new Capitulo(8, 50, breakingbad3);
 
         seriebreakingbad.agregarTemporada(breakingbad1);
         breakingbad1.agregarCapitulo(bbcapitulo1);
@@ -287,7 +288,7 @@ public class NeflisMain {
         System.out.println(manu.visteCompletoEsto(serieSense8));
         System.out.println(sense1.cuantosMinutosDuraLatemporadaCompleta());
         System.out.println(serieSense8.cuantoDura());
-        System.out.println(sense1.ultimoCapituloDisponible());
+        System.out.println(sense1.ultimoCapituloDisponible());**/
 
         System.out.println(vicky.cuantasUnidadesDeContenidoViste());
         System.out.println(vicky.visteCompletoEsto(serieSherlock));
@@ -297,11 +298,12 @@ public class NeflisMain {
         System.out.println(sherlockTemp1.cuantosMinutosDuraLatemporadaCompleta());
         System.out.println(sherlockTemp2.ultimoCapituloDisponible().getNumeroDeCapitulo());
         System.out.println(vicky.generosVistosPorUsuario());
+        System.out.println(vicky.esFanDe(keanuReeves));
 
-        System.out.println(fran.generoPreferido());
-        System.out.println(manu.generoPreferido());
-        System.out.println(flor.generoPreferido());
-        System.out.println(vicky.generoPreferido());
+
+
+
+
 
     }
 }

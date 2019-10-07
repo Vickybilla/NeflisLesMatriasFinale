@@ -2,31 +2,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Serie implements Contenido {
+
     private String nombreDeSerie;
-    private List<String> actoresFijosDeLaSerie = new ArrayList<>();
-    private List<Temporada> temporadas2 = new ArrayList<>();
+    private List<Actor> actoresFijosDeLaSerie = new ArrayList<>();
+    private List<Temporada> temporadas = new ArrayList<>();
     public String genero;
-    private Temporada unaTemporada;
+
+
 
     public Serie(String nombreDeSerie, String genero){
         this.nombreDeSerie=nombreDeSerie;
         this.genero=genero;
     }
 
-    public void setActoresFijosDeLaSerie (String unActor){
+    public void setActoresFijosDeLaSerie (Actor unActor){
         this.actoresFijosDeLaSerie.add(unActor);
     }
+    public Boolean actuo(Actor actor){
+
+        return actoresFijosDeLaSerie.contains(actor);
+    }
+
 
     public void agregarTemporada(Temporada unaTemporada) {
-        this.temporadas2.add(unaTemporada);
+
+        this.temporadas.add(unaTemporada);
     }
 
     public Integer cuantasTemporadasTenes() {
-        return this.temporadas2.size();
+
+        return this.temporadas.size();
     }
 
     public boolean vistoCompleto(Usuario unUsuario) {
-        return this.temporadas2.stream()
+        return this.temporadas.stream()
                 .allMatch(temporada -> temporada.vistoCompleto(unUsuario));
 
     }
@@ -36,8 +45,8 @@ public class Serie implements Contenido {
     }
 
     public Integer duracionDeTodaLaSerieEnMinutos() {
-        return temporadas2.stream()
-                .mapToInt(unaTemporada -> unaTemporada.cuantosMinutosDuraLatemporadaCompleta())
+        return temporadas.stream()
+                .mapToInt(t -> t.cuantosMinutosDuraLatemporadaCompleta())
                 .sum();
     }
 
