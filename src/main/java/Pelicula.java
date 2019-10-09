@@ -31,9 +31,7 @@ public class Pelicula extends UnidadDeContenido {
     // ese metodo se hizo en el usuario pero esta mal. aplicaria misma solucion a capitulo
 
 
-    public boolean vistoCompleto(Usuario unUsuario) {
-        return unUsuario.contenidoFueVisto(this);
-}
+
 
     public Boolean actuo(Actor actor){
 

@@ -14,6 +14,7 @@ public class UnidadDeContenido implements Contenido {
     }
     private Integer duracion;
 
+
     public String getGenero() {
         return genero;
     }

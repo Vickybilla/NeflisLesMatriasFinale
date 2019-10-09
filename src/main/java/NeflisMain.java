@@ -7,16 +7,16 @@ public class NeflisMain {
 
         Serie serieSense8 = new Serie("Sense8", "Ciencia Ficcion");
         Temporada sense1 = new Temporada();
-        Capitulo sensecap1 = new Capitulo(1, 40, sense1);
-        Capitulo sensecap2 = new Capitulo(2, 46, sense1);
+        Capitulo sensecap1 = new Capitulo(1, 40, sense1,serieSense8);
+        Capitulo sensecap2 = new Capitulo(2, 46, sense1,serieSense8);
         serieSense8.agregarTemporada(sense1);
         sense1.setNumeroDeTemporada(1);
         sense1.agregarCapitulo(sensecap1);
         sense1.agregarCapitulo(sensecap2);
         Temporada sense2 = new Temporada();
-        Capitulo sensecap3 = new Capitulo(3, 52, sense2);
-        Capitulo sensecap4 = new Capitulo(4, 92, sense2);
-        Capitulo sensecap5 = new Capitulo(5, 48, sense2);
+        Capitulo sensecap3 = new Capitulo(3, 52, sense2,serieSense8);
+        Capitulo sensecap4 = new Capitulo(4, 92, sense2,serieSense8);
+        Capitulo sensecap5 = new Capitulo(5, 48, sense2,serieSense8);
         serieSense8.agregarTemporada(sense2);
         sense2.agregarCapitulo(sensecap3);
         sense2.agregarCapitulo(sensecap4);
@@ -39,16 +39,16 @@ public class NeflisMain {
         serieSherlock.agregarTemporada(sherlockTemp3);
         sherlockTemp3.setNumeroDeTemporada(3);
 
-        Capitulo sherlockcap1 = new Capitulo(1, 56,sherlockTemp1);
-        Capitulo sherlockcap2 = new Capitulo(2, 67, sherlockTemp1);
-        Capitulo sherlockcap3 = new Capitulo(3, 78,sherlockTemp1);
-        Capitulo sherlockcap4 = new Capitulo(4, 60,sherlockTemp2);
-        Capitulo sherlockcap5 = new Capitulo(5, 50, sherlockTemp2);
-        Capitulo sherlockcap6 = new Capitulo(6, 48, sherlockTemp2);
-        Capitulo sherlockcap7 = new Capitulo(7, 68, sherlockTemp3);
-        Capitulo sherlockcap8 = new Capitulo(8, 58,sherlockTemp3);
-        Capitulo sherlockcap9 = new Capitulo(9, 70, sherlockTemp3);
-        Capitulo sherlockcap10 = new Capitulo(10, 98, sherlockTemp3);
+        Capitulo sherlockcap1 = new Capitulo(1, 56,sherlockTemp1,serieSherlock);
+        Capitulo sherlockcap2 = new Capitulo(2, 67, sherlockTemp1,serieSherlock);
+        Capitulo sherlockcap3 = new Capitulo(3, 78,sherlockTemp1,serieSherlock);
+        Capitulo sherlockcap4 = new Capitulo(4, 60,sherlockTemp2,serieSherlock);
+        Capitulo sherlockcap5 = new Capitulo(5, 50, sherlockTemp2,serieSherlock);
+        Capitulo sherlockcap6 = new Capitulo(6, 48, sherlockTemp2,serieSherlock);
+        Capitulo sherlockcap7 = new Capitulo(7, 68, sherlockTemp3,serieSherlock);
+        Capitulo sherlockcap8 = new Capitulo(8, 58,sherlockTemp3,serieSherlock);
+        Capitulo sherlockcap9 = new Capitulo(9, 70, sherlockTemp3,serieSherlock);
+        Capitulo sherlockcap10 = new Capitulo(10, 98, sherlockTemp3,serieSherlock);
         Actor markGatiss = new Actor("Mark Gatiss");
         sherlockcap1.setActoresInvitados(markGatiss);
       /*  sherlockcap2.setActoresInvitados("Rupert Graves");
@@ -120,7 +120,7 @@ public class NeflisMain {
         vicky.yaLoViste(sherlockcap9);
         vicky.yaLoViste(sherlockcap10);
         vicky.yaLoViste(constantine);
-
+        vicky.yaLoViste(serieSherlock);
 
         manu.yaLoViste(constantine);
         manu.yaLoViste(sensecap1);
@@ -139,19 +139,19 @@ public class NeflisMain {
         Serie seriestrangerthings = new Serie("Stranger Things", "Ciencia Ficcion");
         Temporada stranger1 = new Temporada();
         stranger1.setNumeroDeTemporada(1);
-        Capitulo strangercapitulo1 = new Capitulo(1, 58, stranger1);
-        Capitulo strangercapitulo2 = new Capitulo(2, 46, stranger1);
-        Capitulo strangercapitulo3 = new Capitulo(3, 52,stranger1);
-        Capitulo strangercapitulo4 = new Capitulo(4, 50, stranger1);
+        Capitulo strangercapitulo1 = new Capitulo(1, 58, stranger1,seriestrangerthings);
+        Capitulo strangercapitulo2 = new Capitulo(2, 46, stranger1,seriestrangerthings);
+        Capitulo strangercapitulo3 = new Capitulo(3, 52,stranger1,seriestrangerthings);
+        Capitulo strangercapitulo4 = new Capitulo(4, 50, stranger1,seriestrangerthings);
         Temporada stranger2 = new Temporada();
         stranger2.setNumeroDeTemporada(2);
-        Capitulo stranger2capitulo5 = new Capitulo(5, 42, stranger2);
-        Capitulo stranger2capitulo6 = new Capitulo(6, 44, stranger2);
-        Capitulo stranger2capitulo7 = new Capitulo(7, 48, stranger2);
+        Capitulo stranger2capitulo5 = new Capitulo(5, 42, stranger2,seriestrangerthings);
+        Capitulo stranger2capitulo6 = new Capitulo(6, 44, stranger2,seriestrangerthings);
+        Capitulo stranger2capitulo7 = new Capitulo(7, 48, stranger2,seriestrangerthings);
         Temporada stranger3 = new Temporada();
         stranger3.setNumeroDeTemporada(3);
-        Capitulo strangercapitulo8 = new Capitulo(8, 40, stranger3);
-        Capitulo strangercapitulo9 = new Capitulo(9, 54, stranger3);
+        Capitulo strangercapitulo8 = new Capitulo(8, 40, stranger3,seriestrangerthings);
+        Capitulo strangercapitulo9 = new Capitulo(9, 54, stranger3,seriestrangerthings);
 
         seriestrangerthings.agregarTemporada(stranger1);
         stranger1.agregarCapitulo(strangercapitulo1);
@@ -299,7 +299,7 @@ public class NeflisMain {
         System.out.println(sherlockTemp2.ultimoCapituloDisponible().getNumeroDeCapitulo());
         System.out.println(vicky.generosVistosPorUsuario());
         System.out.println(vicky.esFanDe(keanuReeves));
-
+        System.out.println(stranger2capitulo5.generoDeSerie());
 
 
 

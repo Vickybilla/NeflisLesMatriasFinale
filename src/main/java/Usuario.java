@@ -53,7 +53,7 @@ public class Usuario {
                 .sum();
     }
 
-
+//excepcion  manejarlo en el controller
     public String generoPreferido() {
         return this.generosVistosPorUsuario().stream()
                 .max(Comparator.comparing(genero -> this.minutosVistosporGenero(genero)))
